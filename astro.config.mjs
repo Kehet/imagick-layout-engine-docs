@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://kehet.github.io',
+    base: '/imagick-layout-engine-docs',
 	integrations: [
 		starlight({
 			title: 'ImagickLayoutEngine documentation for PHP',
