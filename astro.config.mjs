@@ -8,8 +8,11 @@ export default defineConfig({
     base: '/imagick-layout-engine-docs',
 	integrations: [
 		starlight({
-			title: 'ImagickLayoutEngine documentation for PHP',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Kehet/imagick-layout-engine' }],
+			title: 'kehet/imagick-layout-engine',
+			social: [
+                { icon: 'github', label: 'GitHub', href: 'https://github.com/Kehet/imagick-layout-engine' },
+                { icon: 'github', label: 'GitHub Docs', href: 'https://github.com/Kehet/imagick-layout-engine-docs' },
+            ],
 			sidebar: [
 				{
 					label: 'Guides',

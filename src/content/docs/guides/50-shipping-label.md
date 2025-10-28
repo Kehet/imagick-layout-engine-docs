@@ -1,6 +1,6 @@
 ---
-title: "More realistic example: shipping label"
-description: "More realistic example: shipping label"
+title: "Example: shipping label"
+description: "Example: shipping label"
 ---
 
 ```php
@@ -8,7 +8,6 @@ description: "More realistic example: shipping label"
 
 use Kehet\ImagickLayoutEngine\Containers\RowContainer;
 use Kehet\ImagickLayoutEngine\Items\Rectangle;
-
 
 $width = 1000;
 $height = 1500;
