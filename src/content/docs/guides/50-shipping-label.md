@@ -3,11 +3,24 @@ title: "Example: shipping label"
 description: "Example: shipping label"
 ---
 
+## Output
+
+![Example output image](../../../assets/50-shipping-label.png)
+
+## Code
+
 ```php
 <?php
 
+require 'vendor/autoload.php';
+
+use Kehet\ImagickLayoutEngine\Containers\ColumnContainer;
 use Kehet\ImagickLayoutEngine\Containers\RowContainer;
-use Kehet\ImagickLayoutEngine\Items\Rectangle;
+use Kehet\ImagickLayoutEngine\Enums\Gravity;
+use Kehet\ImagickLayoutEngine\Enums\ImageMode;
+use Kehet\ImagickLayoutEngine\Items\Image;
+use Kehet\ImagickLayoutEngine\Items\Text;
+use Kehet\ImagickLayoutEngine\Items\TextWrap;
 
 $width = 1000;
 $height = 1500;
@@ -20,7 +33,7 @@ $root = new ColumnContainer;
 $root->setBorder(draw(stroke: 'black', strokeWidth: 10));
 
 // row 1
-$title = new Text(draw(stroke: 'black'), 'Acme Corporation' . "\n" . '"Tools"');
+$title = new Text(draw(stroke: 'black'), 'Acme Corporation' . "\n" . 'Tools');
 $title->setBorder(draw(stroke: 'black', strokeWidth: 10));
 $title->setPadding(10);
 $root->addItem($title);
@@ -86,9 +99,5 @@ $root->draw($imagick, 0, 0, $width, $height);
 
 // Output image as png to file
 $imagick->setImageFormat('png');
-$imagick->writeImage(__DIR__.'/shipping-label.png');
+$imagick->writeImage(__DIR__.'/50-shipping-label.png');
 ```
-
-## Output
-
-![Example output image](../../../assets/shipping-label.png)

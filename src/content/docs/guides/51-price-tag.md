@@ -3,8 +3,16 @@ title: "Example: price tag"
 description: "Example: price tag"
 ---
 
+## Output
+
+![Example output image](../../../assets/51-price-tag.png)
+
+## Code
+
 ```php
 <?php
+
+require 'vendor/autoload.php';
 
 use Kehet\ImagickLayoutEngine\Containers\ColumnContainer;
 use Kehet\ImagickLayoutEngine\Containers\RowContainer;
@@ -95,10 +103,5 @@ $root->addItem($column2);
 $root->draw($imagick, 0, 0, $width, $height);
 
 $imagick->setImageFormat('png');
-$imagick->writeImage(__DIR__ . '/price-tag.png');
-
+$imagick->writeImage(__DIR__ . '/51-price-tag.png');
 ```
-
-## Output
-
-![Example output image](../../../assets/price-tag.png)

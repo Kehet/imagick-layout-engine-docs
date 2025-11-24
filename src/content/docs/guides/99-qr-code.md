@@ -8,8 +8,23 @@ This example uses third party library [Bacon/BaconQrCode](https://github.com/Bac
 ```php
 <?php
 
+use BaconQrCode\Renderer\Image\ImagickImageBackEnd;
+use BaconQrCode\Renderer\ImageRenderer;
+use BaconQrCode\Renderer\RendererStyle\RendererStyle;
+use BaconQrCode\Writer;
+use Kehet\ImagickLayoutEngine\Items\DrawableInterface;
+use Kehet\ImagickLayoutEngine\Traits\BorderTrait;
+use Kehet\ImagickLayoutEngine\Traits\MarginTrait;
+use Kehet\ImagickLayoutEngine\Traits\PaddingTrait;
+
+require 'vendor/autoload.php';
+
 class QRCode implements DrawableInterface
 {
+
+    use BorderTrait;
+    use MarginTrait;
+    use PaddingTrait;
 
     public function __construct(public string $data)
     {
@@ -27,7 +42,7 @@ class QRCode implements DrawableInterface
 
         [$x, $y, $width, $height] = $this->getBoundingBoxInsideBorder($x, $y, $width, $height);
         [$x, $y, $width, $height] = $this->getBoundingBoxInsidePadding($x, $y, $width, $height);
-        
+
         // Render the QR code
         $renderer = new ImageRenderer(
             new RendererStyle(
@@ -46,8 +61,8 @@ class QRCode implements DrawableInterface
         $imagick->compositeImage($qrCode, Imagick::COMPOSITE_DEFAULT, $x, $y);
 
         $qrCode->clear();
-        
-        // Don't forget to draw the border
+
+        // Remember to draw the border
         $this->drawBorders($imagick, $borderX, $borderY, $borderWidth, $borderHeight);
     }
 

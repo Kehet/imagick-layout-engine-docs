@@ -3,10 +3,18 @@ title: Drawing a text
 description: Drawing a text
 ---
 
+## Output
+
+![Example output image](../../../assets/03-text.png)
+
+## Code
+
 ```php
 <?php
 
-use Kehet\ImagickLayoutEngine\Containers\RowContainer;
+require 'vendor/autoload.php';
+
+use Kehet\ImagickLayoutEngine\Containers\ColumnContainer;
 use Kehet\ImagickLayoutEngine\Items\Text;
 
 $width = 1500;
@@ -19,38 +27,37 @@ $imagick->newImage($width, $height, new ImagickPixel('white'));
 
 // Define root container
 
-$frame = new ColumnContainer;
-$frame->addItem(
+$blackFill = draw(fill: 'black');
+
+$root = new ColumnContainer;
+$root->addItem(
     new Text(
-        draw(fill: 'black'),
+        $blackFill,
         'Lorem Ipsum Dolor',
-        initialFontSize: 120,
-        minFontSize: 50
+        initialFontSize: 120 // this forces the font size to be larger than the default if it fits
     )
 );
-$frame->addItem(
+$root->addItem(
     new Text(
-        draw(fill: 'black'),
+        $blackFill,
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum vulputate eros at rutrum.'
+        // default size is 10px - 40px
     )
 );
-$frame->addItem(
+$root->addItem(
     new Text(
-        draw(fill: 'black'),
+        $blackFill,
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis aliquam pulvinar. Donec dictum mollis volutpat. Nulla facilisi. Nulla egestas hendrerit lobortis. Proin tincidunt interdum eros a pharetra. Nam tincidunt, justo eget pulvinar consequat, velit tortor iaculis urna, in vulputate libero ipsum at ante. '
+        // long text will be smaller
     )
 );
 
 // Draw container onto image
 
-$frame->draw($imagick, 0, 0, $width, $height);
+$root->draw($imagick, 0, 0, $width, $height);
 
 // Output image as png to file
 
 $imagick->setImageFormat('png');
-$imagick->writeImage(__DIR__.'/text.png');
+$imagick->writeImage(__DIR__.'/03-test.png');
 ```
-
-## Output
-
-![Example output image](../../../assets/text.png)
