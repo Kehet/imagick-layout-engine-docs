@@ -1,1 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill-rule="evenodd" d="M81 36 64 0 47 36l-1 2-9-10a6 6 0 0 0-9 9l10 10h-2L0 64l36 17h2L28 91a6 6 0 1 0 9 9l9-10 1 2 17 36 17-36v-2l9 10a6 6 0 1 0 9-9l-9-9 2-1 36-17-36-17-2-1 9-9a6 6 0 1 0-9-9l-9 10v-2Zm-17 2-2 5c-4 8-11 15-19 19l-5 2 5 2c8 4 15 11 19 19l2 5 2-5c4-8 11-15 19-19l5-2-5-2c-8-4-15-11-19-19l-2-5Z" clip-rule="evenodd"/><path d="M118 19a6 6 0 0 0-9-9l-3 3a6 6 0 1 0 9 9l3-3Zm-96 4c-2 2-6 2-9 0l-3-3a6 6 0 1 1 9-9l3 3c3 2 3 6 0 9Zm0 82c-2-2-6-2-9 0l-3 3a6 6 0 1 0 9 9l3-3c3-2 3-6 0-9Zm96 4a6 6 0 0 1-9 9l-3-3a6 6 0 1 1 9-9l3 3Z"/><style>path{fill:#000}@media (prefers-color-scheme:dark){path{fill:#fff}}</style></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  - The Imagick Layout Engine
+  - Copyright (C) 2025
+  -
+  - This program is free software: you can redistribute it and/or modify
+  - it under the terms of the GNU General Public License as published by
+  - the Free Software Foundation, either version 3 of the License, or
+  - (at your option) any later version.
+  -
+  - This program is distributed in the hope that it will be useful,
+  - but WITHOUT ANY WARRANTY; without even the implied warranty of
+  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  - GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License
+  - along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<svg
+        width="142.84439"
+        height="142.84439"
+        viewBox="0 0 142.84439 142.84439"
+        fill="none"
+        version="1.1"
+        id="svg3"
+        xmlns="http://www.w3.org/2000/svg"
+>
+    <defs
+            id="defs3"/>
+    <rect
+            x="0"
+            y="0"
+            width="142.84439"
+            height="142.84439"
+            rx="5.951849"
+            ry="5.951849"
+            fill="#282828"
+            id="rect1"/>
+    <path
+            d="M 11.903725,11.903691 H 130.94071 V 47.61479 H 53.56667 11.903725 V 29.759238 Z"
+            fill="#98971a"
+            id="path1"/>
+    <path
+            d="M 11.903725,59.518492 V 130.94068 H 47.614822 V 59.518492 Z"
+            fill="#98971a"
+            id="path2"/>
+    <path
+            d="M 59.518521,130.94068 H 130.94071 V 59.518492 H 59.518521 Z"
+            fill="#ebdbb2"
+            id="path3"/>
+</svg>
